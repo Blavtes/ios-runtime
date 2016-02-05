@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+rsync -a "${SRCROOT}/internal/NativeScript/Frameworks/NativeScript.framework" "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+
 pushd "$SRCROOT/internal"
 ./strip-dynamic-framework-architectures.sh
 popd
